@@ -1,69 +1,49 @@
-# flutter_demo
+# Flutter 加密货币追踪器
 
-一个新的 Flutter 项目。
+一个基于 Flutter 的应用程序，用于追踪和显示加密货币代币列表及其各种数据点。
 
-## 环境要求
+![应用截图](https://user-images.githubusercontent.com/12345/screenshot.png) <!-- 请将此处的URL替换为您的应用截图URL -->
 
-- Flutter SDK
-- Dart SDK
-- Android Studio / Xcode (取决于目标平台)
-- iOS 模拟器 / Android 模拟器
+## ✨ 功能特性
 
-## 开始使用
+-   **动态数据网格**: 使用 `syncfusion_flutter_datagrid` 展示数据，支持首末列固定。
+-   **自定义UI组件**: 丰富的自定义小部件，用于显示代币信息。
+-   **现代状态管理**: 利用 `flutter_hooks` 实现高效的状态管理。
+-   **GitHub Actions**: 配置了 CI/CD，可自动构建并部署到 GitHub Pages。
 
-### 1. 安装依赖
+## 🚀 本地开发
 
-```bash
-flutter pub get
-```
+1.  **环境要求**:
+    -   确保已安装 [Flutter SDK](https://flutter.cn/docs/get-started/install)。
+    -   使用 VS Code 或 Android Studio。
 
-### 2. 运行项目
+2.  **克隆并运行**:
+    ```sh
+    # 克隆仓库
+    git clone https://github.com/<您的用户名>/flutter_demo.git
+    cd flutter_demo
 
-开发模式运行：
-```bash
-flutter run
-```
+    # 安装依赖
+    flutter pub get
 
-指定设备运行（可选）：
-```bash
-flutter devices  # 查看可用设备
-flutter run -d <device-id>  # 在指定设备上运行
-```
+    # 运行应用 (可指定 chrome, ios, android 等设备)
+    flutter run -d chrome
+    ```
 
-### 3. 构建应用
+## 📦 构建生产版本
 
-#### Android 构建
-```bash
-# 构建 APK
-flutter build apk
+-   **Android**:
+    ```sh
+    flutter build apk --release
+    # or
+    flutter build appbundle --release
+    ```
 
-# 构建 Android App Bundle
-flutter build appbundle
-```
-构建完成后可在 `build/app/outputs/` 目录下找到输出文件。
+-   **iOS**:
+    ```sh
+    flutter build ios --release
+    # 然后在 Xcode 中打开 ios/Runner.xcworkspace 进行归档和分发。
+    ```
 
-#### iOS 构建
-```bash
-# 构建 iOS 版本
-flutter build ios
-
-# 构建 iOS 版本并打开 Xcode 工程
-open ios/Runner.xcworkspace
-```
-然后可以通过 Xcode 进行进一步的配置和发布。
-
-## 项目结构
-
-```
-lib/          - 主要的代码目录
-test/         - 测试文件目录
-android/      - Android 平台相关代码
-ios/          - iOS 平台相关代码
-web/          - Web 平台相关代码
-```
-
-## 学习资源
-
-- [Lab: 编写你的第一个 Flutter 应用](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: 实用 Flutter 示例](https://docs.flutter.dev/cookbook)
-- [Flutter 在线文档](https://docs.flutter.dev/) - 提供教程、示例、移动开发指南和完整的 API 参考。
+-   **Web**:
+    flutter build web --release --base-href /flutter-demo/
